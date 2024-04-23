@@ -1,0 +1,72 @@
+<html>
+    <head>
+      <title>Hand Gesture Web App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+  
+      <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+  
+    <body style="background-color: rgb(222, 225, 42);">
+    <div class="container">
+    
+      <center>
+  <h3 class="btn btn-warning heading">
+Gesture Web App
+  <br>
+  <span>&#128079</span>
+  <span>&#128077</span>
+  <span>&#128076</span>
+  <span>&#9997</span>
+  <span>&#9996</span>
+  </h3>
+        <br><br>
+  
+        <h2 style="color: blueviolet;">Take a selfie of a gesture to know about it's meaning</h2>
+            <br>
+          <h3 style="color: blueviolet;">On the following gestures the model is trained-</h3>
+          <br>
+<h3>
+<span>&#128077 <img src="1line.png"></span>
+<span>&#128077 <img src="1line.png"></span>
+<span>&#9996 <img src="1line.png"></span>
+<span>&#x2764</span>
+</h3>
+
+        
+  <div class="col-md-4 col-sm-12 col-xs-12">
+  <label style="background-color: rgb(230, 237, 230); border-radius: 5px; width: 192px; font-size: 24px;" >Webcam view - </label>
+  <div id="camera">
+  </div>
+  <br>
+  <br>
+  <button onclick="take_snapshot()" class="btn btn-warning">Captured Image</button>
+  </div>
+  
+  <div class="col-md-4 col-sm-12 col-xs-12">
+  <label style="background-color: rgb(230, 237, 230); color:green; border-radius: 5px; width: 192px; font-size: 15px;">Prediction - </label>
+  <p class="emotion_name" id="result_hand_name"></p>
+  <p class="emoji" id="update_hand"></p>
+  </div>
+
+  <div class="col-md-4 col-sm-12 col-xs-12">
+  <label style="background-color: rgb(230, 237, 230); border-radius: 5px; width: 192px; font-size: 24px;">Snapshot - </label>
+  <div id="result">
+  </div>
+  <br>
+  <br>
+  <button onclick="check()" class="btn btn-warning">Predict Hand Gesture</button>
+  
+      </center>
+  
+    </div>
+  
+  <script src="main.js"></script>
+  
+    </body>
+  </html> 
